@@ -1,0 +1,13 @@
+p {margin:10px 0 0 15px;}
+input[type] {background-color:#f5f5f5;}
+input[value] {border:1px solid #222;}
+textarea {resize:none;} /* 텍스트 영역 크기를 사용자가 만지지 못하도록함 */
+.group1 {
+    /* 색의 값 0~255 노란색 ff0 -> 255,255,0*/
+    background-color:rgba(255,255,0,0.2);
+    padding:20px;
+    display:flex;
+    flex-flow: column nowrap;
+    gap:12px;
+    align-items:flex-start;
+}
