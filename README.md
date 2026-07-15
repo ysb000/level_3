@@ -28,14 +28,27 @@
     * 객체의 속성 읽기
     * 예) `a.href;`
     * 예) `video.src;`, `video.autoplay;` 
+    * `span.textContent;` : span 태그 안 내용을 읽는다. `<span>내용</span>`
+    * `input.value;` : value는 input 전용 속성으로 다른 태그에 사용불가
 * `객체.속성 = '값';`
     * 객체의 속성 값을 대입(변경을 위한 대입)
     * 대입 시 기존값이 있으면? 기존값 자동제거되고 새로운 값 대입
-    * 예) `a.href = './reset.css';`
-    * 예) `video.src = './coffee.mp4';`,`video.autoplay = 0;` 
+    * `a.href = './reset.css';`
+    * `video.src = './coffee.mp4';`
+    * `video.autoplay = 0;`
+    * `<span>0</span>` span의 내용 0 -> 1로 변경
+        * `span.textContent = 1;` // 기존값을 제거하고 1을 새로 대입
+        * `span.textContent = span.textContent + 1;` // 기존값에 1을 더한 값 대입
+    * `<input type="text" value="1">` input의 내용을 1 -> 2로 변경
+        * `input.value = 2;` // 기존값 제거, 2 새로 대입
+        * `input.value = input.value + 2;` 기존값에 2를 더한 값을 대입
 * `객체.함수();`
     * 객체를 실행
     * `객체.함수() = '값';` (X)
+* `이벤트="함수();"`
+    * 이벤트 동작 시 특정 함수를 실행한다.
+    * `<태그 onclick="func();">` //함수호출
+    * 위 작성 전 준비사항: `function fun1(){반복실행명령}` //함수생성
 ## DOM(Document Object Model)
 ### JS에서 제어하고 싶은 HTML요소가 있을 경우 순서
 1. 제어하고 싶은 HTML 수와 class, id 등 확인
